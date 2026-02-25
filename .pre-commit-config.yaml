@@ -17,3 +17,5 @@ repos:
     rev: v1.8.0
     hooks:
       - id: mypy
+      # This allows mypy to understand numpy and matplotlib types
+        args: [--explicit-package-bases, --ignore-missing-imports]
